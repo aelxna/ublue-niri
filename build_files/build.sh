@@ -5,22 +5,59 @@ set -ouex pipefail
 # Copy the contents of system_files/ of the git repo to /
 cp -avf "/ctx/system_files"/. /
 
+### Enable repositories
+echo "Setting up Terra repository..."
+if ! dnf5 repolist --all | grep -q '^terra '; then
+  echo "Installing Terra repository..."
+  curl -fsSL https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo -o /etc/yum.repos.d/terra.repo
+  dnf5 install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release || true
+fi
+
+echo "Enabling Terra repository..."
+dnf5 config-manager setopt terra.enabled=1
+
+# Fingerprint sensor driver for Dell XPS 13 9310 and similar devices
+dnf5 -y copr enable manciukic/libfprint-tod-goodix
+
+### Remove gnome-shell
+dnf5 remove -y gnome-shell gnome-session-wayland-session gnome-software
+
 ### Install packages
+echo "Installing programs..."
+dnf5 install -y --skip-unavailable --skip-broken \
+  libfprint-tod-goodix \
+  niri \
+  waybar \
+  swaybg \
+  SwayNotificationCenter \
+  wofi \
+  darkman \
+  zsh \
+  fish \
+  ripgrep \
+  fd-find \
+  bat \
+  direnv \
+  zoxide \
+  dua-cli \
+  neovim \
+  eza \
+  yazi \
+  tmux \
+  ffmpeg \
+  zed \
+  starship \
+  ghostty \
+  podman-compose \
+  @c-development \
+  @development-tools \
+  @virtualization \
+  rust \
+  cargo \
+  cmake \
 
-# Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
-
-# this installs a package from fedora repos
-dnf5 install -y tmux
-
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+dnf5 -y copr disable manciukic/libfprint-tod-goodix
 
 #### Example for enabling a System Unit File
 

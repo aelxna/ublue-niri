@@ -4,7 +4,7 @@ COPY build_files /
 COPY system_files /system_files
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite:stable
+FROM ghcr.io/ublue-os/silverblue-main:latest
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:testing
 # FROM ghcr.io/ublue-os/aurora:stable
@@ -35,6 +35,13 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh
+
+### INSTALL HOMEBREW
+COPY --from=ghcr.io/ublue-os/brew:latest /system_files /
+
+### CREATE NIX DIRECTORY
+# Optional: for users who want to install nix later
+RUN mkdir -p /nix
 
 ### LINTING
 ## Verify final image and contents are correct.
