@@ -30,6 +30,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   swaybg \
   SwayNotificationCenter \
   wofi \
+  xdg-desktop-portal-gtk \
   darkman \
   zsh \
   fish \
@@ -41,21 +42,28 @@ dnf5 install -y --skip-unavailable --skip-broken \
   dua-cli \
   neovim \
   eza \
+  fzf \
   yazi \
   tmux \
+  git \
+  wget \
+  curl \
+  btop \
   zed \
   starship \
   ghostty \
+  tailscale \
   podman-compose \
+  python3 \
   @c-development \
   @development-tools \
   @virtualization \
   rust \
   cargo \
   cmake \
+  clang \
 
 dnf5 -y swap libfprint libfprint-tod-goodix
-dnf5 -y swap ffmpeg-free ffmpeg
 
 # Disable COPRs so they don't end up enabled on the final image:
 dnf5 -y copr disable manciukic/libfprint-tod-goodix
