@@ -25,7 +25,6 @@ dnf5 remove -y gnome-shell gnome-session-wayland-session gnome-software
 ### Install packages
 echo "Installing programs..."
 dnf5 install -y --skip-unavailable --skip-broken \
-  libfprint-tod-goodix \
   niri \
   waybar \
   swaybg \
@@ -44,7 +43,6 @@ dnf5 install -y --skip-unavailable --skip-broken \
   eza \
   yazi \
   tmux \
-  ffmpeg \
   zed \
   starship \
   ghostty \
@@ -55,6 +53,9 @@ dnf5 install -y --skip-unavailable --skip-broken \
   rust \
   cargo \
   cmake \
+
+dnf5 -y swap libfprint libfprint-tod-goodix
+dnf5 -y swap ffmpeg-free ffmpeg
 
 # Disable COPRs so they don't end up enabled on the final image:
 dnf5 -y copr disable manciukic/libfprint-tod-goodix
