@@ -54,6 +54,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   ghostty \
   tailscale \
   podman-compose \
+  distrobox \
   python3 \
   @c-development \
   @development-tools \
