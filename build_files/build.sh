@@ -29,6 +29,8 @@ dnf5 install -y --skip-unavailable --skip-broken \
   waybar \
   swaybg \
   SwayNotificationCenter \
+  swayidle \
+  hyprlock \
   wofi \
   xdg-desktop-portal-gtk \
   darkman \
