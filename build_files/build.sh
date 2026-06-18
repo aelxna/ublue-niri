@@ -25,16 +25,36 @@ dnf5 remove -y gnome-shell gnome-session-wayland-session gnome-software
 ### Install packages
 echo "Installing programs..."
 dnf5 install -y --skip-unavailable --skip-broken \
+  gdm \
   niri \
   waybar \
   swaybg \
   SwayNotificationCenter \
   swayidle \
+  swayosd \
   hyprlock \
-  wofi \
+  fuzzel \
+  cliphist \
   xdg-desktop-portal-gtk \
+  xdg-desktop-portal-gnome \
+  xwayland-satellite \
+  polkit-gnome \
+  gnome-keyring \
+  wireplumber \
+  pipewire-pulse \
+  brightnessctl \
+  udiskie \
   darkman \
   kde-connect \
+  gvfs-goa \
+  gvfs-mtp \
+  gnome-online-accounts \
+  evolution-data-server \
+  evolution-alarm-notify \
+  gnome-control-center \
+  nautilus \
+  playerctl \
+  wl-clipboard \
   zsh \
   fish \
   ripgrep \
