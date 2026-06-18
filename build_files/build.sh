@@ -32,6 +32,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   wofi \
   xdg-desktop-portal-gtk \
   darkman \
+  kde-connect \
   zsh \
   fish \
   ripgrep \
