@@ -22,7 +22,6 @@ dnf5 -y copr enable manciukic/libfprint-tod-goodix
 ### Install packages
 echo "Installing programs..."
 dnf5 install -y --skip-unavailable --skip-broken \
-  gnome-initial-setup \
   gdm \
   niri \
   waybar \
