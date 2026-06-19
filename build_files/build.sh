@@ -19,12 +19,10 @@ dnf5 config-manager setopt terra.enabled=1
 # Fingerprint sensor driver for Dell XPS 13 9310 and similar devices
 dnf5 -y copr enable manciukic/libfprint-tod-goodix
 
-### Remove gnome-shell
-dnf5 remove -y gnome-shell gnome-session-wayland-session gnome-software
-
 ### Install packages
 echo "Installing programs..."
 dnf5 install -y --skip-unavailable --skip-broken \
+  gnome-initial-setup \
   gdm \
   niri \
   waybar \
