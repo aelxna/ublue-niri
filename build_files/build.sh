@@ -29,7 +29,6 @@ dnf5 install -y --skip-unavailable --skip-broken \
   SwayNotificationCenter \
   swayidle \
   swayosd \
-  hyprlock \
   fuzzel \
   cliphist \
   xdg-desktop-portal-gtk \
@@ -48,10 +47,15 @@ dnf5 install -y --skip-unavailable --skip-broken \
   gnome-online-accounts \
   evolution-data-server \
   evolution-alarm-notify \
+  gnome-bluetooth \
+  fprintd \
   gnome-control-center \
   nautilus \
   playerctl \
   wl-clipboard \
+  fuse \
+  fuse-libs \
+  fuse-common \
   zsh \
   fish \
   ripgrep \
@@ -85,6 +89,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   clang \
 
 dnf5 -y swap libfprint libfprint-tod-goodix
+dnf5 -y swap swaylock swaylock-effects
 
 # Disable COPRs so they don't end up enabled on the final image:
 dnf5 -y copr disable manciukic/libfprint-tod-goodix
