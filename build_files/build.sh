@@ -34,7 +34,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   xdg-desktop-portal-gtk \
   xdg-desktop-portal-gnome \
   xwayland-satellite \
-  polkit-gnome \
+  polkit-kde \
   gnome-keyring \
   wireplumber \
   pipewire-pulse \
@@ -47,6 +47,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   gnome-online-accounts \
   evolution-data-server \
   evolution-alarm-notify \
+  blueman \
   gnome-bluetooth \
   fprintd \
   gnome-control-center \
