@@ -26,6 +26,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   niri \
   waybar \
   swaybg \
+  adw-gtk3-theme \
   SwayNotificationCenter \
   swayidle \
   swayosd \
@@ -48,7 +49,6 @@ dnf5 install -y --skip-unavailable --skip-broken \
   evolution-data-server \
   evolution-alarm-notify \
   blueman \
-  gnome-bluetooth \
   fprintd \
   gnome-control-center \
   gnome-tweaks \
