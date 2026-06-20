@@ -50,6 +50,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   gnome-bluetooth \
   fprintd \
   gnome-control-center \
+  gnome-tweaks \
   nautilus \
   playerctl \
   wl-clipboard \
