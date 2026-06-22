@@ -42,6 +42,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   brightnessctl \
   udiskie \
   darkman \
+  dbus-daemon \
   kde-connect \
   gvfs-goa \
   gvfs-mtp \
