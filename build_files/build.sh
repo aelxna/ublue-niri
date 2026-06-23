@@ -24,6 +24,7 @@ echo "Installing programs..."
 dnf5 install -y --skip-unavailable --skip-broken \
   gdm \
   niri \
+  noctalia-shell \
   waybar \
   swaybg \
   adw-gtk3-theme \
@@ -59,7 +60,6 @@ dnf5 install -y --skip-unavailable --skip-broken \
   fuse \
   fuse-libs \
   fuse-common \
-  zsh \
   fish \
   ripgrep \
   fd-find \
