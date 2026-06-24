@@ -24,7 +24,6 @@ echo "Installing programs..."
 dnf5 install -y --skip-unavailable --skip-broken \
   gdm \
   niri \
-  noctalia-shell \
   waybar \
   swaybg \
   adw-gtk3-theme \
@@ -38,6 +37,8 @@ dnf5 install -y --skip-unavailable --skip-broken \
   xwayland-satellite \
   polkit-kde \
   gnome-keyring \
+  gnome-keyring-pam \
+  seahorse \
   wireplumber \
   pipewire-pulse \
   brightnessctl \
@@ -52,6 +53,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   evolution-alarm-notify \
   blueman \
   fprintd \
+  fprintd-pam \
   gnome-control-center \
   gnome-tweaks \
   nautilus \
