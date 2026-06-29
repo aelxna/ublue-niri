@@ -91,7 +91,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   rust \
   cargo \
   cmake \
-  clang \
+  clang-tools-extra \
 
 dnf5 -y swap libfprint libfprint-tod-goodix
 dnf5 -y swap swaylock swaylock-effects
