@@ -24,13 +24,7 @@ echo "Installing programs..."
 dnf5 install -y --skip-unavailable --skip-broken \
   gdm \
   niri \
-  waybar \
-  swaybg \
   adw-gtk3-theme \
-  SwayNotificationCenter \
-  swayidle \
-  swayosd \
-  fuzzel \
   cliphist \
   xdg-desktop-portal-gtk \
   xdg-desktop-portal-gnome \
@@ -92,8 +86,21 @@ dnf5 install -y --skip-unavailable --skip-broken \
   cmake \
   clang-tools-extra \
 
+#### Install waybar, sway shell components
+# dnf5 install -y --skip-unavailable --skip-broken \
+#  waybar \
+#  swaybg \
+#  SwayNotificationCenter \
+#  swayidle \
+#  swayosd \
+#  fuzzel \
+# dnf5 -y swap swaylock swaylock-effects
+
+#### Alternatively, install noctalia
+dnf5 install -y --skip-unavailable --skip-broken \
+  noctalia-shell
+
 dnf5 -y swap libfprint libfprint-tod-goodix
-dnf5 -y swap swaylock swaylock-effects
 
 # Disable COPRs so they don't end up enabled on the final image:
 dnf5 -y copr disable manciukic/libfprint-tod-goodix
