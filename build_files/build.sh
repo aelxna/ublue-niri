@@ -88,8 +88,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   @c-development \
   @development-tools \
   @virtualization \
-  rust \
-  cargo \
+  rustup \
   cmake \
   clang-tools-extra \
 
