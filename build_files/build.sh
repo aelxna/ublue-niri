@@ -93,7 +93,8 @@ dnf5 install -y --skip-unavailable --skip-broken \
   SwayNotificationCenter \
   swayidle \
   swayosd \
-  fuzzel \
+  fuzzel 
+
 dnf5 -y swap swaylock swaylock-effects
 
 #### Alternatively, install noctalia
