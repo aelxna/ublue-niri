@@ -85,6 +85,10 @@ dnf5 install -y --skip-unavailable --skip-broken \
   rustup \
   cmake \
   clang-tools-extra \
+  typst \
+  typstyle \
+  texlive-collection-xetex
+
 
 #### Install waybar, sway shell components
 dnf5 install -y --skip-unavailable --skip-broken \
