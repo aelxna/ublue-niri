@@ -102,13 +102,20 @@ dnf5 install -y --skip-unavailable --skip-broken \
 dnf5 -y swap swaylock swaylock-effects
 
 #### Alternatively, install noctalia
-# dnf5 install -y --skip-unavailable --skip-broken \
-#  noctalia-shell
+dnf5 install -y --skip-unavailable --skip-broken \
+ noctalia-shell
 
 dnf5 -y swap libfprint libfprint-tod-goodix
 
 # Disable COPRs so they don't end up enabled on the final image:
 dnf5 -y copr disable manciukic/libfprint-tod-goodix
+
+# Install Proton VPN
+wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d' ' -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.5-1.noarch.rpm"
+
+dnf5 -y install ./protonvpn-stable-release-1.0.5-1.noarch.rpm && dnf5 -y check-update --refresh
+
+dnf5 -y install proton-vpn-gnome-desktop
 
 #### Example for enabling a System Unit File
 
