@@ -103,7 +103,7 @@ dnf5 -y swap swaylock swaylock-effects
 
 #### Alternatively, install noctalia
 dnf5 install -y --skip-unavailable --skip-broken \
- noctalia-shell
+ noctalia
 
 dnf5 -y swap libfprint libfprint-tod-goodix
 
