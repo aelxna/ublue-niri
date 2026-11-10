@@ -53,6 +53,7 @@ dnf5 install -y --skip-unavailable --skip-broken \
   nautilus \
   playerctl \
   wl-clipboard \
+  power-profiles-daemon \
   fuse \
   fuse-libs \
   fuse-common \
