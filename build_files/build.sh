@@ -53,7 +53,6 @@ dnf5 install -y --skip-unavailable --skip-broken \
   nautilus \
   playerctl \
   wl-clipboard \
-  power-profiles-daemon \
   fuse \
   fuse-libs \
   fuse-common \
@@ -92,15 +91,15 @@ dnf5 install -y --skip-unavailable --skip-broken \
 
 
 #### Install waybar, sway shell components
-dnf5 install -y --skip-unavailable --skip-broken \
-  waybar \
-  swaybg \
-  SwayNotificationCenter \
-  swayidle \
-  swayosd \
-  fuzzel 
-
-dnf5 -y swap swaylock swaylock-effects
+# dnf5 install -y --skip-unavailable --skip-broken \
+#   waybar \
+#   swaybg \
+#   SwayNotificationCenter \
+#   swayidle \
+#   swayosd \
+#   fuzzel 
+# 
+# dnf5 -y swap swaylock swaylock-effects
 
 #### Alternatively, install noctalia
 dnf5 install -y --skip-unavailable --skip-broken \
